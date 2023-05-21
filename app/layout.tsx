@@ -1,5 +1,6 @@
 import 'css/global.css';
 import { Roboto_Condensed } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const roboto = Roboto_Condensed({
   weight: ['300', '400', '700'],
@@ -23,7 +24,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
