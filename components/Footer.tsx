@@ -31,7 +31,7 @@ const Footer = () => {
     } else if (navigator.clipboard) {
       // Copy link to clipboard
       await navigator.clipboard.writeText(shareData.url);
-      displayCopyTooltip(e.target);
+      displayCopyTooltip(e.target as Element);
     } else {
       // Browser is not compatible with Navigator API
       window.prompt(
